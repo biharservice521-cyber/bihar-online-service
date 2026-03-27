@@ -204,7 +204,9 @@ window.open("https://wa.me/918797201218?text="+msg);
 
 // PAYMENT
 function pay(){
-window.open("upi://pay?pa=8797201218-3@axl=rajkumar gupta");
+let upiLink = "upi://pay?pa=8797201218-3@axl&pn=BiharService&cu=INR";
+
+window.location.href = upiLink;
 }
 
 // LOGIN SYSTEM
