@@ -1,19 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Bihar Online Service</title>
 
+<!-- Hindi Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5}
-header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
-nav{display:flex;overflow:auto;background:#fff}
-nav a{flex:1;text-align:center;padding:12px;text-decoration:none;color:#a435f0;font-weight:bold}
-.section{display:none;padding:15px;margin:10px;background:#fff;border-radius:10px}
+body{
+  margin:0;
+  font-family:'Noto Sans Devanagari', Arial;
+  background:#f5f5f5
+}
+header{
+  background:#a435f0;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  font-size:22px
+}
+nav{
+  display:flex;
+  overflow:auto;
+  background:#fff
+}
+nav a{
+  flex:1;
+  text-align:center;
+  padding:12px;
+  text-decoration:none;
+  color:#a435f0;
+  font-weight:bold
+}
+.section{
+  display:none;
+  padding:15px;
+  margin:10px;
+  background:#fff;
+  border-radius:10px
+}
 .active{display:block}
-.btn{display:block;background:#a435f0;color:#fff;padding:12px;border-radius:6px;text-align:center;margin-top:10px;text-decoration:none;border:none}
-input,select,textarea{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:5px}
+.btn{
+  display:block;
+  background:#a435f0;
+  color:#fff;
+  padding:12px;
+  border-radius:6px;
+  text-align:center;
+  margin-top:10px;
+  text-decoration:none;
+  border:none
+}
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+  border:1px solid #ccc;
+  border-radius:5px
+}
 h2,h3{text-align:center}
 </style>
 
@@ -21,7 +68,7 @@ h2,h3{text-align:center}
 
 <body>
 
-<header>Bihar Online Service</header>
+<header>बिहार ऑनलाइन सर्विस</header>
 
 <nav>
 <a href="#" onclick="show('home')">Home</a>
@@ -36,28 +83,36 @@ h2,h3{text-align:center}
 
 <!-- HOME -->
 <div id="home" class="section active">
-<h2>Bihar Online Service</h2>
-<p>?? ?????? ????? ???? ??? ????, ?? ?? ???? ??? ?????? ??? ???????? ????? ?? ???? ????</p>
+<h2>बिहार ऑनलाइन सर्विस</h2>
 
-<a class="btn" href="https://wa.me/918797201218">WhatsApp Contact</a>
+<p>
+अब ऑनलाइन फॉर्म भरना हुआ आसान।  
+आप घर बैठे सभी सरकारी एवं प्राइवेट फॉर्म भर सकते हैं।
+</p>
+
+<a class="btn" href="https://wa.me/918797201218">
+WhatsApp पर संपर्क करें
+</a>
 </div>
 
 <!-- SERVICES -->
 <div id="services" class="section">
-<h3>Our Services</h3>
+<h3>हमारी सेवाएं</h3>
 <ul>
-<li>Income Certificate / ?? ?????? ????</li>
-<li>Caste Certificate / ???? ?????? ????</li>
-<li>Residence Certificate / ????? ?????? ????</li>
-<li>Aadhar Card / ???? ?????</li>
-<li>Pan Card / ??? ?????</li>
-<li>Voter Card / ???? ?????</li>
-<li>Driving Licence / ????????? ???????</li>
-<li>Shram Card / ???? ?????</li>
-<li>Passport / ????????</li>
-<li>Hindi & English Typing / ???????</li>
+<li>Income Certificate / आय प्रमाण पत्र</li>
+<li>Caste Certificate / जाति प्रमाण पत्र</li>
+<li>Residence Certificate / निवास प्रमाण पत्र</li>
+<li>Aadhar Card / आधार कार्ड</li>
+<li>Pan Card / पैन कार्ड</li>
+<li>Voter Card / वोटर कार्ड</li>
+<li>Driving Licence / ड्राइविंग लाइसेंस</li>
+<li>Shram Card / श्रम कार्ड</li>
+<li>Passport / पासपोर्ट</li>
+<li>Hindi & English Typing / टाइपिंग</li>
 <li>Resume / CV</li>
-<li>Shaadi Card, Banner, Visiting Card</li>
+<li>Shaadi Card / शादी कार्ड</li>
+<li>Banner / बैनर</li>
+<li>Visiting Card</li>
 <li>Admission Form</li>
 <li>Fee Receipt</li>
 <li>Bill Book</li>
@@ -66,13 +121,13 @@ h2,h3{text-align:center}
 
 <!-- DOCUMENTS -->
 <div id="documents" class="section">
-<h3>Required Documents</h3>
+<h3>जरूरी दस्तावेज</h3>
 <ul>
-<li>Aadhar Card</li>
-<li>Mobile Number</li>
-<li>Email ID</li>
-<li>Passport Photo</li>
-<li>Address Proof</li>
+<li>आधार कार्ड</li>
+<li>मोबाइल नंबर</li>
+<li>ईमेल आईडी</li>
+<li>पासपोर्ट साइज फोटो</li>
+<li>एड्रेस प्रूफ</li>
 </ul>
 </div>
 
@@ -80,17 +135,17 @@ h2,h3{text-align:center}
 <div id="apply" class="section">
 <h3>Apply / Order</h3>
 
-<input type="text" id="name" placeholder="Name">
-<input type="text" id="mobile" placeholder="Mobile">
+<input type="text" id="name" placeholder="नाम लिखें">
+<input type="text" id="mobile" placeholder="मोबाइल नंबर">
 
 <select id="service">
-<option>Select Service</option>
+<option>सेवा चुनें</option>
 <option>Income Certificate</option>
 <option>Caste Certificate</option>
 <option>Typing</option>
 </select>
 
-<textarea id="details" placeholder="Details"></textarea>
+<textarea id="details" placeholder="विवरण लिखें"></textarea>
 
 <button class="btn" onclick="sendForm()">Submit</button>
 </div>
@@ -102,20 +157,24 @@ h2,h3{text-align:center}
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218@okaxis">
 
-<a class="btn" href="https://wa.me/918797201218?text=Payment Done">Confirm Payment</a>
+<a class="btn" href="https://wa.me/918797201218?text=Payment Done">
+Payment Confirm
+</a>
 </div>
 
 <!-- CONTACT -->
 <div id="contact" class="section">
-<h3>Contact Us</h3>
-<p>?? Panchdeori Bazar, Gopalganj</p>
-<p>?? 8797201218</p>
+<h3>संपर्क करें</h3>
+<p>📍 पंचदेवरी बाजार, गोपालगंज</p>
+<p>📞 8797201218</p>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="section">
 <h3>About Us</h3>
-<p>Bihar Service ?? ???????? ?????? ???? ?????? ?? ???? ??? ?????? ?? ????? ??? ???? ????</p>
+<p>
+Bihar Service एक भरोसेमंद ऑनलाइन सेवा केंद्र है जहाँ सभी प्रकार के सरकारी एवं प्राइवेट कार्य किए जाते हैं।
+</p>
 </div>
 
 <!-- LOGIN -->
@@ -136,19 +195,17 @@ sections.forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-// WhatsApp Form
 function sendForm(){
 var name=document.getElementById("name").value;
 var mobile=document.getElementById("mobile").value;
 var service=document.getElementById("service").value;
 var details=document.getElementById("details").value;
 
-var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
+var msg="Name: "+name+" Mobile: "+mobile+" Service: "+service+" Details: "+details;
 
 window.open("https://wa.me/918797201218?text="+msg);
 }
 
-// Login Signup
 function signup(){
 localStorage.setItem("user",document.getElementById("user").value);
 localStorage.setItem("pass",document.getElementById("pass").value);
