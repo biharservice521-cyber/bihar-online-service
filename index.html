@@ -5,80 +5,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bihar Online Service</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Poppins';background:#f5f5f5}
+body{
+margin:0;
+font-family:'Noto Sans Devanagari', Arial;
+background:#f5f5f5
+}
 
-/* HEADER */
 header{
-background:linear-gradient(45deg,#6a11cb,#a435f0);
+background:#a435f0;
 color:#fff;
 padding:15px;
 text-align:center;
 font-size:22px
 }
 
-/* NAV */
-nav{display:flex;overflow:auto;background:#fff}
-nav a{flex:1;padding:10px;text-align:center;color:#a435f0;font-weight:bold;cursor:pointer}
-
-/* SECTION */
-.section{display:none;padding:15px}
-.active{display:block}
-
-/* CARD */
-.card{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-margin:10px
+nav{
+display:flex;
+overflow:auto;
+background:#fff
 }
 
-/* INPUT */
+nav a{
+flex:1;
+text-align:center;
+padding:12px;
+text-decoration:none;
+color:#a435f0;
+font-weight:bold;
+cursor:pointer
+}
+
+.section{
+display:none;
+padding:15px;
+margin:10px;
+background:#fff;
+border-radius:10px
+}
+
+.active{display:block}
+
+/* button */
+.btn{
+background:#a435f0;
+color:#fff;
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin-top:10px;
+display:block;
+text-align:center
+}
+
+/* inputs */
 input,select,textarea{
 width:100%;
-padding:12px;
-margin:8px 0;
-border-radius:8px;
+padding:10px;
+margin:5px 0;
+border-radius:5px;
 border:1px solid #ccc
 }
 
-/* BUTTON */
-.btn{
-background:#6a11cb;
-color:#fff;
-padding:12px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px
+/* animation */
+.scroll-box{
+overflow:hidden;
 }
-
-/* ANIMATION */
-.scroll{
+.scroll-text{
 white-space:nowrap;
-animation:scroll 15s linear infinite;
+display:inline-block;
+animation:scrollLeft 20s linear infinite;
 color:#a435f0;
-font-weight:bold
+font-weight:bold;
 }
-@keyframes scroll{
+@keyframes scrollLeft{
 0%{transform:translateX(100%)}
 100%{transform:translateX(-100%)}
 }
 
-/* WHATSAPP */
+/* whatsapp floating */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:#fff;
-padding:15px;
+padding:12px;
 border-radius:50%;
-text-decoration:none
+font-size:20px;
+text-decoration:none;
 }
+
 </style>
 </head>
 
@@ -91,34 +111,41 @@ text-decoration:none
 <a onclick="show('services')">Services</a>
 <a onclick="show('documents')">Documents</a>
 <a onclick="show('apply')">Apply</a>
-<a onclick="show('payment')">Payment</a>
+<a onclick="show('payment')">Payments</a>
 <a onclick="show('contact')">Contact</a>
 <a onclick="show('about')">About</a>
-<a onclick="show('login')">Login</a>
 </nav>
 
 <!-- HOME -->
 <div id="home" class="section active">
-<div class="card">
+
 <h2>अब ऑनलाइन फॉर्म भरना हुआ आसान</h2>
+
 <p>आप घर बैठे ऑनलाइन फॉर्म भरवा सकते हैं</p>
 
-<div class="scroll">
-जाति आय निवास पैन आधार हिंदी इंग्लिश टाइपिंग एप्लीकेशन टाइपिंग सभी कार्य
+<!-- animation -->
+<div class="scroll-box">
+<div class="scroll-text">
+जाति, आय, निवास, पैन कार्ड, आधार कार्ड, हिंदी टाइपिंग, इंग्लिश टाइपिंग, एप्लीकेशन टाइपिंग, एग्जाम पेपर टाइपिंग तथा सभी प्रकार के ऑनलाइन कार्य आप Bihar Online Service के माध्यम से करवा सकते हैं।
+</div>
 </div>
 
+<!-- info -->
 <p>
-Bihar Online Service एक डिजिटल प्लेटफॉर्म है जहाँ आप घर बैठे सभी सरकारी और प्राइवेट सेवाओं का लाभ उठा सकते हैं। यहाँ पर आप आय, जाति, निवास प्रमाण पत्र, आधार कार्ड, पैन कार्ड, ड्राइविंग लाइसेंस, पासपोर्ट, स्कॉलरशिप, एडमिशन और नौकरी फॉर्म आसानी से भरवा सकते हैं। हमारा उद्देश्य है कि हर व्यक्ति को सरल, सुरक्षित और तेज सेवा मिले।
+Bihar Online Service एक ऐसा प्लेटफॉर्म है जहाँ आप घर बैठे सभी प्रकार के सरकारी और प्राइवेट कार्य आसानी से करवा सकते हैं। आज के समय में ऑनलाइन फॉर्म भरना, दस्तावेज बनवाना और विभिन्न सेवाओं का लाभ लेना जरूरी हो गया है। लेकिन कई बार लोगों को सही जानकारी या सुविधा नहीं मिल पाती। इसी समस्या को दूर करने के लिए Bihar Online Service बनाया गया है।
+यहाँ पर आप आय, जाति, निवास प्रमाण पत्र, आधार कार्ड, पैन कार्ड, ड्राइविंग लाइसेंस, पासपोर्ट और अन्य कई सेवाओं के लिए आवेदन कर सकते हैं। साथ ही, टाइपिंग, रिज्यूमे बनवाना, शादी कार्ड, बैनर और अन्य प्रिंटिंग सेवाएं भी उपलब्ध हैं।
+हमारा उद्देश्य है कि हर व्यक्ति को तेज, सुरक्षित और आसान सेवा प्रदान की जाए ताकि वह बिना किसी परेशानी के अपने काम घर बैठे पूरा कर सके।
 </p>
 
-<button class="btn" onclick="openWhatsApp()">WhatsApp</button>
-</div>
+<a class="btn" href="https://wa.me/918797201218?text=मुझे ऑनलाइन फॉर्म भरवाना है">WhatsApp</a>
+
 </div>
 
 <!-- SERVICES -->
 <div id="services" class="section">
-<div class="card">
-<h3>Services</h3>
+
+<h3>Our Services</h3>
+
 <ul>
 <li>Income Certificate</li>
 <li>Caste Certificate</li>
@@ -134,34 +161,36 @@ Bihar Online Service एक डिजिटल प्लेटफॉर्म �
 <li>Shram Card</li>
 <li>10th Scholarship</li>
 <li>12th Scholarship</li>
-<li>College Scholarship</li>
+<li>College/University Scholarship</li>
 <li>Banner / Flex</li>
 <li>ID Card</li>
-<li>Passport Photo</li>
+<li>Passport Size Photo</li>
 <li>School Admission</li>
-<li>College Admission</li>
-<li>All Job Forms</li>
+<li>College/University Admission</li>
+<li>All Govt & Private Job Form</li>
 </ul>
 
 <p>
-यहाँ सभी सरकारी और प्राइवेट सेवाओं के फॉर्म भरे जाते हैं और सभी प्रकार के ऑनलाइन कार्य किए जाते हैं।
+Bihar Online Service के माध्यम से आप सभी प्रकार के सरकारी और प्राइवेट कार्य आसानी से करवा सकते हैं। यहाँ पर सभी सरकारी प्रमाण पत्र, स्कॉलरशिप फॉर्म, एडमिशन फॉर्म, और नौकरी के आवेदन भरे जाते हैं। साथ ही प्रिंटिंग और टाइपिंग से जुड़ी सभी सेवाएं भी उपलब्ध हैं। हमारा उद्देश्य है कि आपको एक ही स्थान पर सभी सेवाएं मिल जाएं।
 </p>
-</div>
+
 </div>
 
 <!-- DOCUMENTS -->
 <div id="documents" class="section">
-<div class="card">
-<h3>Documents</h3>
-<p>
-ऑनलाइन कार्य के लिए आधार कार्ड, मोबाइल नंबर, ईमेल आईडी, मार्कशीट और पासपोर्ट फोटो जरूरी होते हैं। सही जानकारी देने से काम जल्दी पूरा होता है।
-</p>
-</div>
+<h3>Required Documents</h3>
+<ul>
+<li>Aadhar Card</li>
+<li>Mobile Number</li>
+<li>Email ID</li>
+<li>Passport Photo</li>
+<li>Address Proof</li>
+</ul>
 </div>
 
 <!-- APPLY -->
 <div id="apply" class="section">
-<div class="card">
+
 <h3>Apply Form</h3>
 
 <input id="name" placeholder="Name">
@@ -173,99 +202,68 @@ Bihar Online Service एक डिजिटल प्लेटफॉर्म �
 <option>Caste Certificate</option>
 <option>Pan Card</option>
 <option>Typing</option>
-<option>Admission</option>
 </select>
 
 <textarea id="details" placeholder="Details"></textarea>
 
 <button class="btn" onclick="sendForm()">Submit</button>
-</div>
+
 </div>
 
 <!-- PAYMENT -->
 <div id="payment" class="section">
-<div class="card">
 <h3>Payment</h3>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218-3@axl">
-
-<button class="btn" onclick="pay()">Pay Now</button>
-</div>
+<p>UPI: 8797201218@okaxis</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218@okaxis">
 </div>
 
 <!-- CONTACT -->
 <div id="contact" class="section">
-<div class="card">
-<h3>Contact</h3>
-<p>Headquarter: Panchdeori Bazar, Kateya Gopalganj Bihar 841437</p>
-</div>
+<h3>Contact Us</h3>
+<p>📍 Panchdeori Bazar, Gopalganj</p>
+<p>📞 8797201218</p>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="section">
-<div class="card">
-<h3>About</h3>
-<p>
-Bihar Online Service एक भरोसेमंद सेवा केंद्र है जहाँ सभी डिजिटल सेवाएं दी जाती हैं।
-</p>
-</div>
+<h3>About Us</h3>
+<p>Bihar Online Service एक भरोसेमंद ऑनलाइन सेवा केंद्र है।</p>
 </div>
 
-<!-- LOGIN -->
-<div id="login" class="section">
-<div class="card">
-<h3>Login</h3>
-
-<input id="user" placeholder="Username">
-<input id="pass" placeholder="Password">
-
-<button class="btn" onclick="signup()">Signup</button>
-<button class="btn" onclick="login()">Login</button>
-<button class="btn" onclick="logout()">Logout</button>
-
-<p id="profile"></p>
-</div>
-</div>
-
-<a class="whatsapp" href="https://wa.me/918797201218">💬</a>
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/918797201218?text=मुझे ऑनलाइन फॉर्म भरवाना है">💬</a>
 
 <script>
-
 function show(id){
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-// WhatsApp
-function openWhatsApp(){
-window.open("https://wa.me/918797201218?text=मुझे फॉर्म भरवाना है");
+// form submit
+function sendForm(){
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var service=document.getElementById("service").value;
+var details=document.getElementById("details").value;
+
+if(name=="" || mobile==""){
+alert("Please fill details");
+return;
 }
 
-// form
-function sendForm(){
-let msg=`Name:${name.value} Mobile:${mobile.value} Service:${service.value} Details:${details.value}`;
+var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
+
 window.open("https://wa.me/918797201218?text="+msg);
 }
 
-// payment
-function pay(){
-window.location.href="upi://pay?pa=8797201218-3@axl&pn=BiharService";
+// whatsapp popup
+setTimeout(function(){
+if(confirm("क्या आप WhatsApp पर बात करना चाहते हैं?")){
+window.open("https://wa.me/918797201218?text=मुझे ऑनलाइन फॉर्म भरवाना है");
 }
+},5000);
 
-// login system
-function signup(){
-localStorage.setItem("user",user.value);
-localStorage.setItem("pass",pass.value);
-alert("Signup Success");
-}
-
-function login(){
-if(user.value==localStorage.getItem("user")){
-alert("Login Success");
-profile.innerHTML="User: "+user.value;
-}else alert("Wrong");
-}
-
+// logout confirm example
 function logout(){
 if(confirm("Logout करना चाहते हैं?")){
 alert("Logout Success");
@@ -273,14 +271,6 @@ alert("Logout Success");
 alert("Cancel");
 }
 }
-
-// popup
-setTimeout(()=>{
-if(confirm("WhatsApp पर बात करें?")){
-openWhatsApp();
-}
-},4000);
-
 </script>
 
 </body>
