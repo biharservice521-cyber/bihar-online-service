@@ -139,13 +139,18 @@ Bihar Online Service एक आधुनिक डिजिटल सेवा �
 
 <!-- PAYMENT -->
 <div id="payment" class="section">
-<h3>Payments</h3>
+<div class="card">
+
+<h3>Payment</h3>
+
+<input type="number" id="amount" placeholder="Amount डालें ₹">
 
 <button class="btn" onclick="pay()">Pay Now</button>
 
-<p>Click करने पर Google Pay / PhonePe / Paytm खुलेगा</p>
-</div>
+<h3>Payment History</h3>
+<div id="history"></div>
 
+</div>
 <!-- CONTACT -->
 <div id="contact" class="section">
 <h3>Contact</h3>
@@ -239,6 +244,62 @@ if(confirm("WhatsApp पर बात करना चाहते हैं?"))
 window.open("https://wa.me/918797201218");
 }
 },4000);
+  function pay(){
+
+let amount = document.getElementById("amount").value;
+
+if(amount == ""){
+    alert("Amount डालो");
+    return;
+}
+
+let upiLink = `upi://pay?pa=8797201218-3@axl&pn=BiharService&am=${amount}&cu=INR`;
+
+window.location.href = upiLink;
+
+setTimeout(function(){
+
+let payment = {
+    amount: "₹" + amount,
+    status: "Success",
+    date: new Date().toLocaleString()
+};
+
+let history = JSON.parse(localStorage.getItem("payments")) || [];
+history.push(payment);
+localStorage.setItem("payments", JSON.stringify(history));
+
+showHistory();
+
+alert("Payment Success ✅");
+
+},5000);
+}
+
+// history show
+function showHistory(){
+
+let history = JSON.parse(localStorage.getItem("payments")) || [];
+
+let html = "";
+
+history.forEach(p=>{
+html += `
+<div style="background:#fff;padding:10px;margin:5px;border-radius:8px">
+💰 ${p.amount} <br>
+📅 ${p.date} <br>
+✅ ${p.status}
+</div>
+`;
+});
+
+document.getElementById("history").innerHTML = html;
+}
+
+// page load
+window.onload = function(){
+showHistory();
+}
 
 </script>
 
