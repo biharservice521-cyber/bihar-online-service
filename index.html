@@ -5,50 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bihar Online Service</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Noto Sans Devanagari', Arial;background:#f5f5f5}
-header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
-nav{display:flex;overflow:auto;background:#fff}
-nav a{flex:1;text-align:center;padding:12px;text-decoration:none;color:#a435f0;font-weight:bold}
-.section{display:none;padding:15px;margin:10px;background:#fff;border-radius:10px}
-.active{display:block}
-
-.scroll-box{overflow:hidden;}
-.scroll-text{
-display:inline-block;
-white-space:nowrap;
-animation:scrollLeft 20s linear infinite;
-font-weight:bold;
-color:#a435f0;
-}
-@keyframes scrollLeft{
-0%{transform:translateX(100%)}
-100%{transform:translateX(-100%)}
+body{
+margin:0;
+font-family:'Poppins','Noto Sans Devanagari';
+background:#f5f5f5;
 }
 
-.btn{
-display:block;
+header{
 background:#a435f0;
 color:#fff;
-padding:12px;
-border-radius:6px;
+padding:15px;
 text-align:center;
-margin-top:10px;
+font-size:22px;
+}
+
+nav{
+display:flex;
+overflow:auto;
+background:#fff;
+}
+
+nav a{
+flex:1;
+text-align:center;
+padding:12px;
 text-decoration:none;
-border:none
+color:#a435f0;
+font-weight:bold;
+cursor:pointer;
+}
+
+.section{
+display:none;
+padding:20px;
+}
+.active{display:block}
+
+/* WHITE FORM UI */
+.form-box{
+max-width:500px;
+margin:auto;
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.form-box h3{
+text-align:center;
+margin-bottom:20px;
+}
+
+.input-group{
+margin-bottom:12px;
 }
 
 input,select,textarea{
 width:100%;
-padding:10px;
-margin:5px 0;
+padding:12px;
+border-radius:8px;
 border:1px solid #ccc;
-border-radius:5px
+font-size:14px;
 }
 
-h2,h3{text-align:center}
+.row{
+display:flex;
+gap:10px;
+}
+
+.btn{
+padding:12px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn-primary{
+background:#4CAF50;
+color:#fff;
+}
+
+.btn-outline{
+background:#fff;
+border:1px solid #4CAF50;
+}
+
+.profile{
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
 </style>
 </head>
 
@@ -57,68 +110,41 @@ h2,h3{text-align:center}
 <header>Bihar Online Service</header>
 
 <nav>
-<a href="#" onclick="show('home')">Home</a>
-<a href="#" onclick="show('services')">Services</a>
-<a href="#" onclick="show('documents')">Documents</a>
-<a href="#" onclick="show('apply')">Apply</a>
-<a href="#" onclick="show('payment')">Payment</a>
-<a href="#" onclick="show('contact')">Contact</a>
-<a href="#" onclick="show('about')">About</a>
-<a href="#" onclick="show('login')">Login</a>
+<a onclick="show('home')">Home</a>
+<a onclick="show('services')">Services</a>
+<a onclick="show('documents')">Documents</a>
+<a onclick="show('apply')">Apply</a>
+<a onclick="show('login')">Login</a>
+<a onclick="show('profile')">Profile</a>
 </nav>
 
 <!-- HOME -->
 <div id="home" class="section active">
-<h2 style="text-align:center;">Bihar Online Service</h2>
-
-<p style="text-align:center;font-size:18px;font-weight:bold;color:#a435f0;">
-🚀 अब ऑनलाइन फॉर्म भरना हुआ आसान
-</p>
-
-<p style="text-align:center;">
-आप घर बैठे सभी सरकारी एवं प्राइवेट सेवाओं का लाभ उठा सकते हैं।  
-अब आपको लाइन में खड़े होने की जरूरत नहीं — Bihar Online Service आपके लिए हर काम आसान बनाता है।
-</p>
-
-<p>📄 Bihar Online Service के माध्यम से आप निम्न सेवाएं आसानी से प्राप्त कर सकते हैं:</p>
+<h2>🚀 अब ऑनलाइन फॉर्म भरना हुआ आसान</h2>
+<p>आप घर बैठे सभी सरकारी एवं प्राइवेट सेवाओं का लाभ उठा सकते हैं।</p>
 
 <ul>
 <li>✔ आय, जाति, निवास प्रमाण पत्र</li>
 <li>✔ आधार कार्ड, पैन कार्ड, वोटर कार्ड</li>
 <li>✔ ड्राइविंग लाइसेंस, पासपोर्ट</li>
-<li>✔ टाइपिंग (Hindi & English), Resume / CV</li>
-<li>✔ शादी कार्ड, बैनर, विजिटिंग कार्ड</li>
+<li>✔ टाइपिंग, Resume / CV</li>
+<li>✔ शादी कार्ड, बैनर</li>
 <li>✔ एडमिशन एवं स्कॉलरशिप फॉर्म</li>
 </ul>
-
-<p>💼 हमारा उद्देश्य है आपको तेज, सुरक्षित और भरोसेमंद सेवा प्रदान करना।</p>
-
-<p style="text-align:center;font-weight:bold;">
-📍 अब घर बैठे ही सभी काम कराएं और समय बचाएं
-</p>
 </div>
 
 <!-- SERVICES -->
 <div id="services" class="section">
 <h3>Our Services</h3>
 <ul>
-<li>Income Certificate / आय प्रमाण पत्र</li>
-<li>Caste Certificate / जाति प्रमाण पत्र</li>
-<li>Residence Certificate / निवास प्रमाण पत्र</li>
-<li>Aadhar Card / आधार कार्ड</li>
-<li>Pan Card / पैन कार्ड</li>
-<li>Voter Card / वोटर कार्ड</li>
-<li>Driving Licence / ड्राइविंग लाइसेंस</li>
-<li>Shram Card / श्रम कार्ड</li>
-<li>Passport / पासपोर्ट</li>
-<li>Typing (Hindi & English)</li>
-<li>Resume / CV</li>
-<li>Shaadi Card / शादी कार्ड</li>
-<li>Banner / बैनर</li>
-<li>Visiting Card</li>
-<li>Admission Form</li>
-<li>Fee Receipt</li>
-<li>Bill Book</li>
+<li>Income Certificate</li>
+<li>Caste Certificate</li>
+<li>Residence Certificate</li>
+<li>Aadhar Card</li>
+<li>Pan Card</li>
+<li>Voter Card</li>
+<li>Driving Licence</li>
+<li>Passport</li>
 </ul>
 </div>
 
@@ -134,44 +160,75 @@ h2,h3{text-align:center}
 </ul>
 </div>
 
-<!-- APPLY -->
+<!-- APPLY WHITE FORM -->
 <div id="apply" class="section">
-<h3>Apply / Order Form</h3>
 
-<div style="background:#f9f4ff;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1)">
+<div class="form-box">
+<h3>Apply Form</h3>
 
-<input type="text" id="name" placeholder="Enter Name / नाम">
-<input type="text" id="mobile" placeholder="Mobile Number">
+<div class="input-group">
+<input id="name" placeholder="Name">
+</div>
 
+<div class="input-group">
+<input id="mobile" placeholder="Phone Number">
+</div>
+
+<div class="input-group">
+<input id="address" placeholder="Address">
+</div>
+
+<div class="row">
+<input id="city" placeholder="City">
+<input id="state" placeholder="State">
+<input id="pincode" placeholder="Zip">
+</div>
+
+<div class="input-group">
 <select id="service">
-<option>Select Service / सेवा चुनें</option>
+<option>Select Service</option>
 <option>Income Certificate</option>
 <option>Caste Certificate</option>
-<option>Residence Certificate</option>
-<option>Aadhar Card</option>
 <option>Pan Card</option>
-<option>Voter Card</option>
-<option>Driving Licence</option>
-<option>Passport</option>
+<option>Typing</option>
 </select>
+</div>
 
-<textarea id="details" placeholder="Enter Details / विवरण"></textarea>
+<textarea id="details" placeholder="Details"></textarea>
 
-<button class="btn" onclick="sendForm()">Submit Request</button>
+<br>
+
+<button class="btn btn-primary" onclick="saveData()">Proceed</button>
 
 </div>
 </div>
 
 <!-- LOGIN -->
 <div id="login" class="section">
-<h3>Login</h3>
 
-<input type="email" id="email" placeholder="Enter Email">
-<input type="password" id="password" placeholder="Enter Password">
+<div class="form-box">
+<h3>Login / Signup</h3>
 
-<button class="btn" onclick="signup()">Signup</button>
-<button class="btn" onclick="login()">Login</button>
-<button class="btn" onclick="googleLogin()">Login with Google</button>
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+
+<button class="btn btn-primary" onclick="signup()">Signup</button>
+<button class="btn btn-outline" onclick="login()">Login</button>
+<button class="btn btn-primary" onclick="googleLogin()">Google Login</button>
+
+</div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="section">
+<h3>User Profile</h3>
+
+<div class="profile">
+<p id="userEmail"></p>
+<p id="userData"></p>
+
+<button class="btn btn-primary" onclick="logout()">Logout</button>
+</div>
 </div>
 
 <script>
@@ -179,57 +236,84 @@ function show(id){
 document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
-
-function sendForm(){
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var service=document.getElementById("service").value;
-var details=document.getElementById("details").value;
-
-var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
-window.open("https://wa.me/918797201218?text="+msg);
-}
 </script>
 
 <script type="module">
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } 
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } 
 from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
 
+import { getFirestore, doc, setDoc, getDoc } 
+from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDf6sIzd8tFJPmYEqJ3RVBOms98bpODPIQ",
-  authDomain: "bihar-online-service.firebaseapp.com",
-  projectId: "bihar-online-service"
+apiKey: "AIzaSyDf6sIzd8tFJPmYEqJ3RVBOms98bpODPIQ",
+authDomain: "bihar-online-service.firebaseapp.com",
+projectId: "bihar-online-service"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-window.signup = function(){
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-createUserWithEmailAndPassword(auth,email,password)
+// signup
+window.signup = ()=>createUserWithEmailAndPassword(auth,email.value,password.value)
 .then(()=>alert("Signup Success"))
-.catch(err=>alert(err.message));
-}
+.catch(e=>alert(e.message));
 
-window.login = function(){
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-signInWithEmailAndPassword(auth,email,password)
+// login
+window.login = ()=>signInWithEmailAndPassword(auth,email.value,password.value)
 .then(()=>alert("Login Success"))
-.catch(err=>alert(err.message));
+.catch(e=>alert(e.message));
+
+// google
+window.googleLogin = ()=>{
+const provider=new GoogleAuthProvider();
+signInWithPopup(auth,provider);
 }
 
-window.googleLogin = function(){
-const provider = new GoogleAuthProvider();
+// logout
+window.logout = ()=>signOut(auth);
 
-signInWithPopup(auth,provider)
-.then(()=>alert("Google Login Success"))
-.catch(err=>alert(err.message));
+// save form
+window.saveData = async ()=>{
+const user=auth.currentUser;
+if(!user){ alert("Login First"); return; }
+
+await setDoc(doc(db,"users",user.uid),{
+name:name.value,
+mobile:mobile.value,
+address:address.value,
+city:city.value,
+state:state.value,
+pincode:pincode.value,
+service:service.value,
+details:details.value
+});
+
+alert("Data Saved");
 }
+
+// show profile
+onAuthStateChanged(auth, async(user)=>{
+if(user){
+userEmail.innerText=user.email;
+
+const snap=await getDoc(doc(db,"users",user.uid));
+if(snap.exists()){
+let d=snap.data();
+userData.innerText=
+`Name: ${d.name}
+Mobile: ${d.mobile}
+Address: ${d.address}
+City: ${d.city}
+State: ${d.state}
+Pin: ${d.pincode}`;
+}
+}
+});
+
 </script>
 
 </body>
