@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bihar Online Service</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#f5f5f5}
+header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
+nav{display:flex;overflow:auto;background:#fff}
+nav a{flex:1;text-align:center;padding:12px;text-decoration:none;color:#a435f0;font-weight:bold}
+.section{display:none;padding:15px;margin:10px;background:#fff;border-radius:10px}
+.active{display:block}
+.btn{display:block;background:#a435f0;color:#fff;padding:12px;border-radius:6px;text-align:center;margin-top:10px;text-decoration:none;border:none}
+input,select,textarea{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:5px}
+h2,h3{text-align:center}
+</style>
+
+</head>
+
+<body>
+
+<header>Bihar Online Service</header>
+
+<nav>
+<a href="#" onclick="show('home')">Home</a>
+<a href="#" onclick="show('services')">Services</a>
+<a href="#" onclick="show('documents')">Documents</a>
+<a href="#" onclick="show('apply')">Apply</a>
+<a href="#" onclick="show('payment')">Payment</a>
+<a href="#" onclick="show('contact')">Contact</a>
+<a href="#" onclick="show('about')">About</a>
+<a href="#" onclick="show('login')">Login</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+<h2>Bihar Online Service</h2>
+<p>?? ?????? ????? ???? ??? ????, ?? ?? ???? ??? ?????? ??? ???????? ????? ?? ???? ????</p>
+
+<a class="btn" href="https://wa.me/918797201218">WhatsApp Contact</a>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="section">
+<h3>Our Services</h3>
+<ul>
+<li>Income Certificate / ?? ?????? ????</li>
+<li>Caste Certificate / ???? ?????? ????</li>
+<li>Residence Certificate / ????? ?????? ????</li>
+<li>Aadhar Card / ???? ?????</li>
+<li>Pan Card / ??? ?????</li>
+<li>Voter Card / ???? ?????</li>
+<li>Driving Licence / ????????? ???????</li>
+<li>Shram Card / ???? ?????</li>
+<li>Passport / ????????</li>
+<li>Hindi & English Typing / ???????</li>
+<li>Resume / CV</li>
+<li>Shaadi Card, Banner, Visiting Card</li>
+<li>Admission Form</li>
+<li>Fee Receipt</li>
+<li>Bill Book</li>
+</ul>
+</div>
+
+<!-- DOCUMENTS -->
+<div id="documents" class="section">
+<h3>Required Documents</h3>
+<ul>
+<li>Aadhar Card</li>
+<li>Mobile Number</li>
+<li>Email ID</li>
+<li>Passport Photo</li>
+<li>Address Proof</li>
+</ul>
+</div>
+
+<!-- APPLY -->
+<div id="apply" class="section">
+<h3>Apply / Order</h3>
+
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="mobile" placeholder="Mobile">
+
+<select id="service">
+<option>Select Service</option>
+<option>Income Certificate</option>
+<option>Caste Certificate</option>
+<option>Typing</option>
+</select>
+
+<textarea id="details" placeholder="Details"></textarea>
+
+<button class="btn" onclick="sendForm()">Submit</button>
+</div>
+
+<!-- PAYMENT -->
+<div id="payment" class="section">
+<h3>Payment</h3>
+<p>UPI: 8797201218@okaxis</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218@okaxis">
+
+<a class="btn" href="https://wa.me/918797201218?text=Payment Done">Confirm Payment</a>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h3>Contact Us</h3>
+<p>?? Panchdeori Bazar, Gopalganj</p>
+<p>?? 8797201218</p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+<h3>About Us</h3>
+<p>Bihar Service ?? ???????? ?????? ???? ?????? ?? ???? ??? ?????? ?? ????? ??? ???? ????</p>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="section">
+<h3>Login / Signup</h3>
+
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+
+<button class="btn" onclick="signup()">Signup</button>
+<button class="btn" onclick="login()">Login</button>
+</div>
+
+<script>
+function show(id){
+var sections=document.querySelectorAll('.section');
+sections.forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+// WhatsApp Form
+function sendForm(){
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var service=document.getElementById("service").value;
+var details=document.getElementById("details").value;
+
+var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
+
+window.open("https://wa.me/918797201218?text="+msg);
+}
+
+// Login Signup
+function signup(){
+localStorage.setItem("user",document.getElementById("user").value);
+localStorage.setItem("pass",document.getElementById("pass").value);
+alert("Signup Success");
+}
+
+function login(){
+if(document.getElementById("user").value==localStorage.getItem("user") &&
+document.getElementById("pass").value==localStorage.getItem("pass")){
+alert("Login Success");
+}else{
+alert("Wrong Details");
+}
+}
+</script>
+
+</body>
+</html>
