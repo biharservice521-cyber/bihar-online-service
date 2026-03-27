@@ -8,75 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:'Noto Sans Devanagari', Arial;
-  background:#f5f5f5
-}
-header{
-  background:#a435f0;
-  color:#fff;
-  padding:15px;
-  text-align:center;
-  font-size:22px
-}
-nav{
-  display:flex;
-  overflow:auto;
-  background:#fff
-}
-nav a{
-  flex:1;
-  text-align:center;
-  padding:12px;
-  text-decoration:none;
-  color:#a435f0;
-  font-weight:bold
-}
-.section{
-  display:none;
-  padding:15px;
-  margin:10px;
-  background:#fff;
-  border-radius:10px
-}
+body{margin:0;font-family:'Noto Sans Devanagari', Arial;background:#f5f5f5}
+header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
+nav{display:flex;overflow:auto;background:#fff}
+nav a{flex:1;text-align:center;padding:12px;text-decoration:none;color:#a435f0;font-weight:bold}
+.section{display:none;padding:15px;margin:10px;background:#fff;border-radius:10px}
 .active{display:block}
-
-.scroll-box{
-  overflow:hidden;
-}
-.scroll-text{
-  display:inline-block;
-  white-space:nowrap;
-  animation:scrollLeft 20s linear infinite;
-  font-weight:bold;
-  color:#a435f0;
-}
-@keyframes scrollLeft{
-  0%{transform:translateX(100%)}
-  100%{transform:translateX(-100%)}
-}
-
-.btn{
-  display:block;
-  background:#a435f0;
-  color:#fff;
-  padding:12px;
-  border-radius:6px;
-  text-align:center;
-  margin-top:10px;
-  text-decoration:none;
-  border:none
-}
-
-input,select,textarea{
-  width:100%;
-  padding:10px;
-  margin:5px 0;
-  border:1px solid #ccc;
-  border-radius:5px
-}
-
+.btn{display:block;background:#a435f0;color:#fff;padding:12px;border-radius:6px;text-align:center;margin-top:10px;text-decoration:none;border:none}
+input,select,textarea{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:5px}
 h2,h3{text-align:center}
 </style>
 </head>
@@ -96,42 +35,11 @@ h2,h3{text-align:center}
 <a href="#" onclick="show('login')">Login</a>
 </nav>
 
-<!-- HOME -->
 <div id="home" class="section active">
-<h2 style="text-align:center;">Bihar Online Service</h2>
-
-<p style="text-align:center;font-size:18px;font-weight:bold;color:#a435f0;">
-🚀 अब ऑनलाइन फॉर्म भरना हुआ आसान
-</p>
-
-<p style="text-align:center;">
-आप घर बैठे सभी सरकारी एवं प्राइवेट सेवाओं का लाभ उठा सकते हैं।  
-अब आपको लाइन में खड़े होने की जरूरत नहीं — Bihar Online Service आपके लिए हर काम आसान बनाता है।
-</p>
-
-<p>
-📄 Bihar Online Service के माध्यम से आप निम्न सेवाएं आसानी से प्राप्त कर सकते हैं:
-</p>
-
-<ul>
-<li>✔ आय, जाति, निवास प्रमाण पत्र</li>
-<li>✔ आधार कार्ड, पैन कार्ड, वोटर कार्ड</li>
-<li>✔ ड्राइविंग लाइसेंस, पासपोर्ट</li>
-<li>✔ टाइपिंग (Hindi & English), Resume / CV</li>
-<li>✔ शादी कार्ड, बैनर, विजिटिंग कार्ड</li>
-<li>✔ एडमिशन एवं स्कॉलरशिप फॉर्म</li>
-</ul>
-
-<p>
-💼 हमारा उद्देश्य है आपको तेज, सुरक्षित और भरोसेमंद सेवा प्रदान करना।
-</p>
-
-<p style="text-align:center;font-weight:bold;">
-📍 अब घर बैठे ही सभी काम कराएं और समय बचाएं
-</p>
+<h2>Bihar Online Service</h2>
+<p style="text-align:center;color:#a435f0;font-weight:bold;">🚀 अब ऑनलाइन फॉर्म भरना हुआ आसान</p>
 </div>
 
-<!-- SERVICES -->
 <div id="services" class="section">
 <h3>Our Services</h3>
 <ul>
@@ -144,119 +52,26 @@ h2,h3{text-align:center}
 <li>Driving Licence / ड्राइविंग लाइसेंस</li>
 <li>Shram Card / श्रम कार्ड</li>
 <li>Passport / पासपोर्ट</li>
-<li>Typing (Hindi & English)</li>
-<li>Resume / CV</li>
-<li>Shaadi Card / शादी कार्ड</li>
-<li>Banner / बैनर</li>
-<li>Visiting Card</li>
-<li>Admission Form</li>
-<li>Fee Receipt</li>
-<li>Bill Book</li>
-</ul>
-</div>
-
-<!-- DOCUMENTS -->
-<div id="documents" class="section">
-<h3>Required Documents</h3>
-<ul>
-<li>Aadhar Card</li>
-<li>Mobile Number</li>
-<li>Email ID</li>
-<li>Passport Photo</li>
-<li>Address Proof</li>
 </ul>
 </div>
 
 <div id="apply" class="section">
-<h3>Apply / Order Form</h3>
-
-<div style="background:#f9f4ff;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1)">
-
-<input type="text" id="name" placeholder="Enter Name / नाम">
-
-<input type="text" id="mobile" placeholder="Mobile Number">
-<select id="service">
-<option>Select Service / सेवा चुनें</option>
-
-<!-- Government Services -->
-<optgroup label="📄 Government Services">
-<option>Income Certificate / आय प्रमाण पत्र</option>
-<option>Caste Certificate / जाति प्रमाण पत्र</option>
-<option>Residence Certificate / निवास प्रमाण पत्र</option>
-<option>Aadhar Card / आधार कार्ड</option>
-<option>Pan Card / पैन कार्ड</option>
-<option>Voter Card / वोटर कार्ड</option>
-<option>Driving Licence / ड्राइविंग लाइसेंस</option>
-<option>Shram Card / श्रम कार्ड</option>
-<option>Passport / पासपोर्ट</option>
-<option>Birth Certificate / जन्म प्रमाण पत्र</option>
-<option>Death Certificate / मृत्यु प्रमाण पत्र</option>
-<option>Online Form Apply</option>
-<option>Government Job Apply</option>
-<option>10th Scholarship</option>
-<option>12th Scholarship</option>
-<option>College/University Scholarship</option>
-<option>School Admission</option>
-<option>College/University Admission</option>
-<option>Bijli Bill Payment</option>
-</optgroup>
-
-<!-- Other Services -->
-<optgroup label="🖨 Other Services">
-<option>Typing (Hindi & English)</option>
-<option>Application Typing</option>
-<option>Exam Paper Typing</option>
-<option>Test Paper Typing</option>
-<option>Resume / CV</option>
-<option>Passport Size Photo</option>
-<option>Shaadi Card / शादी कार्ड</option>
-<option>Banner / बैनर</option>
-<option>Visiting Card</option>
-<option>Fee Receipt</option>
-<option>Bill Book</option>
-<option>Other Service</option>
-</optgroup>
-  </select>
-
-<textarea id="details" placeholder="Enter Details / विवरण"></textarea>
-
-<button class="btn" onclick="sendForm()">Submit Request</button>
-
-</div>
+<h3>Apply</h3>
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="mobile" placeholder="Mobile">
+<textarea id="details" placeholder="Details"></textarea>
+<button class="btn" onclick="sendForm()">Submit</button>
 </div>
 
-<!-- PAYMENT -->
-<div id="payment" class="section">
-<h3>Payment</h3>
-<p>UPI: 8797201218@okaxis</p>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218@okaxis">
-
-<a class="btn" href="https://wa.me/918797201218?text=Payment Done">Confirm Payment</a>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" class="section">
-<h3>Contact</h3>
-<p>📍 Panchdeori Bazar, Gopalganj</p>
-<p>📞 8797201218</p>
-</div>
-
-<!-- ABOUT -->
-<div id="about" class="section">
-<h3>About</h3>
-<p>Bihar Service एक भरोसेमंद online service center है।</p>
-</div>
-
-<!-- LOGIN -->
 <div id="login" class="section">
 <h3>Login</h3>
 
-<input type="text" id="user" placeholder="Username">
-<input type="password" id="pass" placeholder="Password">
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
 
 <button class="btn" onclick="signup()">Signup</button>
 <button class="btn" onclick="login()">Login</button>
+<button class="btn" onclick="googleLogin()">Google Login</button>
 </div>
 
 <script>
@@ -268,50 +83,27 @@ document.getElementById(id).classList.add('active');
 function sendForm(){
 var name=document.getElementById("name").value;
 var mobile=document.getElementById("mobile").value;
-var service=document.getElementById("service").value;
 var details=document.getElementById("details").value;
 
-var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
+var msg="Name:"+name+" Mobile:"+mobile+" Details:"+details;
 window.open("https://wa.me/918797201218?text="+msg);
 }
-
-function signup(){
-localStorage.setItem("user",document.getElementById("user").value);
-localStorage.setItem("pass",document.getElementById("pass").value);
-alert("Signup Success");
-}
-
-function login(){
-if(document.getElementById("user").value==localStorage.getItem("user") &&
-document.getElementById("pass").value==localStorage.getItem("pass")){
-alert("Login Success");
-}else{
-alert("Wrong Details");
-}
-} 
 </script>
 
 <script type="module">
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } 
 from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
 
-// 🔥 Firebase config (तुम्हारा)
 const firebaseConfig = {
   apiKey: "AIzaSyDf6sIzd8tFJPmYEqJ3RVBOms98bpODPIQ",
   authDomain: "bihar-online-service.firebaseapp.com",
-  projectId: "bihar-online-service",
-  storageBucket: "bihar-online-service.firebasestorage.app",
-  messagingSenderId: "565031295930",
-  appId: "1:565031295930:web:598aef6b06e095b18a5b83"
+  projectId: "bihar-online-service"
 };
 
-// Initialize
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// 👉 Signup
 window.signup = function(){
 let email=document.getElementById("email").value;
 let password=document.getElementById("password").value;
@@ -321,7 +113,6 @@ createUserWithEmailAndPassword(auth,email,password)
 .catch(err=>alert(err.message));
 }
 
-// 👉 Login
 window.login = function(){
 let email=document.getElementById("email").value;
 let password=document.getElementById("password").value;
@@ -331,7 +122,6 @@ signInWithEmailAndPassword(auth,email,password)
 .catch(err=>alert(err.message));
 }
 
-// 👉 Google Login
 window.googleLogin = function(){
 const provider = new GoogleAuthProvider();
 
@@ -339,6 +129,7 @@ signInWithPopup(auth,provider)
 .then(()=>alert("Google Login Success"))
 .catch(err=>alert(err.message));
 }
+</script>
 
-</script></body>
+</body>
 </html>
