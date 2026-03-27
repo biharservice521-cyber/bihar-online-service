@@ -291,5 +291,54 @@ alert("Wrong Details");
 } 
 </script>
 
-</body>
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } 
+from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+
+// 🔥 Firebase config (तुम्हारा)
+const firebaseConfig = {
+  apiKey: "AIzaSyDf6sIzd8tFJPmYEqJ3RVBOms98bpODPIQ",
+  authDomain: "bihar-online-service.firebaseapp.com",
+  projectId: "bihar-online-service",
+  storageBucket: "bihar-online-service.firebasestorage.app",
+  messagingSenderId: "565031295930",
+  appId: "1:565031295930:web:598aef6b06e095b18a5b83"
+};
+
+// Initialize
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// 👉 Signup
+window.signup = function(){
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+
+createUserWithEmailAndPassword(auth,email,password)
+.then(()=>alert("Signup Success"))
+.catch(err=>alert(err.message));
+}
+
+// 👉 Login
+window.login = function(){
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+
+signInWithEmailAndPassword(auth,email,password)
+.then(()=>alert("Login Success"))
+.catch(err=>alert(err.message));
+}
+
+// 👉 Google Login
+window.googleLogin = function(){
+const provider = new GoogleAuthProvider();
+
+signInWithPopup(auth,provider)
+.then(()=>alert("Google Login Success"))
+.catch(err=>alert(err.message));
+}
+
+</script></body>
 </html>
