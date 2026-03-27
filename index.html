@@ -167,23 +167,50 @@ h2,h3{text-align:center}
 </ul>
 </div>
 
-<!-- APPLY -->
 <div id="apply" class="section">
-<h3>Apply Form</h3>
+<h3>Apply / Order Form</h3>
 
-<input type="text" id="name" placeholder="Name">
-<input type="text" id="mobile" placeholder="Mobile">
+<div style="background:#f9f4ff;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1)">
+
+<input type="text" id="name" placeholder="Enter Name / नाम">
+
+<input type="text" id="mobile" placeholder="Mobile Number">
 
 <select id="service">
-<option>Select Service</option>
-<option>Income Certificate</option>
-<option>Caste Certificate</option>
-<option>Typing</option>
+<option>Select Service / सेवा चुनें</option>
+
+<!-- Government Services -->
+<optgroup label="📄 Government Services">
+<option>Income Certificate / आय प्रमाण पत्र</option>
+<option>Caste Certificate / जाति प्रमाण पत्र</option>
+<option>Residence Certificate / निवास प्रमाण पत्र</option>
+<option>Aadhar Card / आधार कार्ड</option>
+<option>Pan Card / पैन कार्ड</option>
+<option>Voter Card / वोटर कार्ड</option>
+<option>Driving Licence / ड्राइविंग लाइसेंस</option>
+<option>Shram Card / श्रम कार्ड</option>
+<option>Passport / पासपोर्ट</option>
+</optgroup>
+
+<!-- Other Services -->
+<optgroup label="🖨 Other Services">
+<option>Typing (Hindi & English)</option>
+<option>Resume / CV</option>
+<option>Shaadi Card / शादी कार्ड</option>
+<option>Banner / बैनर</option>
+<option>Visiting Card</option>
+<option>Admission Form</option>
+<option>Fee Receipt</option>
+<option>Bill Book</option>
+</optgroup>
+
 </select>
 
-<textarea id="details" placeholder="Details"></textarea>
+<textarea id="details" placeholder="Enter Details / विवरण"></textarea>
 
-<button class="btn" onclick="sendForm()">Submit</button>
+<button class="btn" onclick="sendForm()">Submit Request</button>
+
+</div>
 </div>
 
 <!-- PAYMENT -->
