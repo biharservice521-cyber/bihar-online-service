@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Bihar Online Service</title>
 
-<!-- Hindi Font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
 <style>
@@ -42,24 +40,23 @@ nav a{
   background:#fff;
   border-radius:10px
 }
-  .scroll-box{
-  overflow:hidden;
-  width:100%;
-}
+.active{display:block}
 
+.scroll-box{
+  overflow:hidden;
+}
 .scroll-text{
   display:inline-block;
   white-space:nowrap;
-  animation:scrollLeft 25s linear infinite;
+  animation:scrollLeft 20s linear infinite;
   font-weight:bold;
   color:#a435f0;
 }
-
 @keyframes scrollLeft{
   0%{transform:translateX(100%)}
   100%{transform:translateX(-100%)}
 }
-.active{display:block}
+
 .btn{
   display:block;
   background:#a435f0;
@@ -71,6 +68,7 @@ nav a{
   text-decoration:none;
   border:none
 }
+
 input,select,textarea{
   width:100%;
   padding:10px;
@@ -78,9 +76,9 @@ input,select,textarea{
   border:1px solid #ccc;
   border-radius:5px
 }
+
 h2,h3{text-align:center}
 </style>
-
 </head>
 
 <body>
@@ -92,23 +90,26 @@ h2,h3{text-align:center}
 <a href="#" onclick="show('services')">Services</a>
 <a href="#" onclick="show('documents')">Documents</a>
 <a href="#" onclick="show('apply')">Apply</a>
-<a href="#" onclick="show('payment')">Payments</a>
-<a href="#" onclick="show('contact')">Contact us</a>
-<a href="#" onclick="show('about')">About us</a>
+<a href="#" onclick="show('payment')">Payment</a>
+<a href="#" onclick="show('contact')">Contact</a>
+<a href="#" onclick="show('about')">About</a>
 <a href="#" onclick="show('login')">Login</a>
 </nav>
 
 <!-- HOME -->
 <div id="home" class="section active">
-<h2>अब ऑनलाइन फॉर्म भरना हुआ आसान। 
-आप घर बैठे किसी भी प्रकार के सरकारी एवं प्राइवेट ऑनलाइन फॉर्म आसानी से भरवा सकते हैं।</h2>
+<h2>Bihar Online Service</h2>
+
+<p>
+अब ऑनलाइन फॉर्म भरना हुआ आसान।  
+आप घर बैठे सभी सरकारी एवं प्राइवेट फॉर्म आसानी से भरवा सकते हैं।
+</p>
 
 <div class="scroll-box">
-  <div class="scroll-text">
-    आय, जाति, निवास, पैन कार्ड, आधार कार्ड, वोटर कार्ड, विजिटिंग कार्ड, आईडी कार्ड, ड्राइविंग लाइसेंस, शादी कार्ड, बैनर, पंपलेट तथा बिहार के सभी कॉलेज, स्कूल एवं यूनिवर्सिटी में एडमिशन एवं स्कॉलरशिप के फॉर्म अब घर बैठे Bihar Service के माध्यम से आसानी से भरवा सकते हैं।
-  </div>
+<div class="scroll-text">
+आय, जाति, निवास, पैन कार्ड, आधार कार्ड, वोटर कार्ड, विजिटिंग कार्ड, आईडी कार्ड, ड्राइविंग लाइसेंस, शादी कार्ड, बैनर, पंपलेट तथा बिहार के सभी कॉलेज, स्कूल एवं यूनिवर्सिटी में एडमिशन एवं स्कॉलरशिप के फॉर्म अब घर बैठे भरवा सकते हैं।
 </div>
-
+</div>
 
 <a class="btn" href="https://wa.me/918797201218?text=मुझे ऑनलाइन फॉर्म भरवाना है">
 Contact on WhatsApp
@@ -128,7 +129,7 @@ Contact on WhatsApp
 <li>Driving Licence / ड्राइविंग लाइसेंस</li>
 <li>Shram Card / श्रम कार्ड</li>
 <li>Passport / पासपोर्ट</li>
-<li>Hindi & English Typing / टाइपिंग</li>
+<li>Typing (Hindi & English)</li>
 <li>Resume / CV</li>
 <li>Shaadi Card / शादी कार्ड</li>
 <li>Banner / बैनर</li>
@@ -143,53 +144,31 @@ Contact on WhatsApp
 <div id="documents" class="section">
 <h3>Required Documents</h3>
 <ul>
-<li>Aadhar Card / आधार कार्ड</li>
-<li>Mobile Number / मोबाइल नंबर</li>
+<li>Aadhar Card</li>
+<li>Mobile Number</li>
 <li>Email ID</li>
-<li>Passport Size Photo</li>
+<li>Passport Photo</li>
 <li>Address Proof</li>
 </ul>
 </div>
 
+<!-- APPLY -->
 <div id="apply" class="section">
-<h3>Apply / Order Form</h3>
+<h3>Apply Form</h3>
 
-<div style="background:#f9f4ff;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1)">
-
-<input type="text" id="name" placeholder="Enter Name / नाम">
-
-<input type="text" id="mobile" placeholder="Mobile Number">
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="mobile" placeholder="Mobile">
 
 <select id="service">
-<option>Select Service / सेवा चुनें</option>
-<option>Income Certificate / आय प्रमाण पत्र</option>
-<option>Caste Certificate / जाति प्रमाण पत्र</option>
-<option>Residence Certificate / निवास प्रमाण पत्र</option>
-<option>Aadhar Card / आधार कार्ड</option>
-<option>Pan Card / पैन कार्ड</option>
-<option>Voter Card / वोटर कार्ड</option>
-<option>Driving Licence / ड्राइविंग लाइसेंस</option>
-<option>Shram Card / श्रम कार्ड</option>
-<option>Passport / पासपोर्ट</option>
-<option>Hindi & English Typing / टाइपिंग</option>
-<option>Resume / CV</option>
-<option>Shaadi Card / शादी कार्ड</option>
-<option>Banner / बैनर</option>
-<option>Visiting Card</option>
-<option>Admission Form</option>
-<option>Fee Receipt</option>
-<option>Bill Book</option>
+<option>Select Service</option>
+<option>Income Certificate</option>
+<option>Caste Certificate</option>
+<option>Typing</option>
 </select>
 
-<textarea id="details" placeholder="Enter Details / विवरण"></textarea>
+<textarea id="details" placeholder="Details"></textarea>
 
-<!-- FILE UPLOAD -->
-<label>Upload Document:</label>
-<input type="file" id="file">
-
-<button class="btn" onclick="sendForm()">Submit Request</button>
-
-</div>
+<button class="btn" onclick="sendForm()">Submit</button>
 </div>
 
 <!-- PAYMENT -->
@@ -199,29 +178,25 @@ Contact on WhatsApp
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8797201218@okaxis">
 
-<a class="btn" href="https://wa.me/918797201218?text=Payment Done">
-Confirm Payment
-</a>
+<a class="btn" href="https://wa.me/918797201218?text=Payment Done">Confirm Payment</a>
 </div>
 
 <!-- CONTACT -->
 <div id="contact" class="section">
-<h3>Contact Us</h3>
+<h3>Contact</h3>
 <p>📍 Panchdeori Bazar, Gopalganj</p>
 <p>📞 8797201218</p>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="section">
-<h3>About Us</h3>
-<p>
-Bihar Service एक भरोसेमंद online service center है जहाँ सभी प्रकार के कार्य किए जाते हैं।
-</p>
+<h3>About</h3>
+<p>Bihar Service एक भरोसेमंद online service center है।</p>
 </div>
 
 <!-- LOGIN -->
 <div id="login" class="section">
-<h3>Login / Signup</h3>
+<h3>Login</h3>
 
 <input type="text" id="user" placeholder="Username">
 <input type="password" id="pass" placeholder="Password">
@@ -230,13 +205,9 @@ Bihar Service एक भरोसेमंद online service center है ज�
 <button class="btn" onclick="login()">Login</button>
 </div>
 
- 
-<!-- JavaScript START -->
 <script>
-
 function show(id){
-var sections=document.querySelectorAll('.section');
-sections.forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
@@ -246,12 +217,7 @@ var mobile=document.getElementById("mobile").value;
 var service=document.getElementById("service").value;
 var details=document.getElementById("details").value;
 
-var msg="📝 New Order:%0A"
-+"Name: "+name+"%0A"
-+"Mobile: "+mobile+"%0A"
-+"Service: "+service+"%0A"
-+"Details: "+details;
-
+var msg="Name:"+name+" Mobile:"+mobile+" Service:"+service+" Details:"+details;
 window.open("https://wa.me/918797201218?text="+msg);
 }
 
@@ -269,13 +235,7 @@ alert("Login Success");
 alert("Wrong Details");
 }
 }
-
 </script>
-<!-- JavaScript END -->
 
 </body>
 </html>
-
-
-
-
