@@ -230,7 +230,10 @@ Bihar Service एक भरोसेमंद online service center है ज�
 <button class="btn" onclick="login()">Login</button>
 </div>
 
-  <script>
+ 
+<!-- JavaScript START -->
+<script>
+
 function show(id){
 var sections=document.querySelectorAll('.section');
 sections.forEach(s=>s.classList.remove('active'));
@@ -267,40 +270,12 @@ alert("Wrong Details");
 }
 }
 
-</body>
-</html>
-function show(id){
-var sections=document.querySelectorAll('.section');
-sections.forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-
-function sendForm(){
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var service=document.getElementById("service").value;
-var details=document.getElementById("details").value;
-
-var msg="Name: "+name+" Mobile: "+mobile+" Service: "+service+" Details: "+details;
-
-window.open("https://wa.me/918797201218?text="+msg);
-}
-
-function signup(){
-localStorage.setItem("user",document.getElementById("user").value);
-localStorage.setItem("pass",document.getElementById("pass").value);
-alert("Signup Success");
-}
-
-function login(){
-if(document.getElementById("user").value==localStorage.getItem("user") &&
-document.getElementById("pass").value==localStorage.getItem("pass")){
-alert("Login Success");
-}else{
-alert("Wrong Details");
-}
-}
 </script>
+<!-- JavaScript END -->
 
 </body>
 </html>
+
+
+
+
