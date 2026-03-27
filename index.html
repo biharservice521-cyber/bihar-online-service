@@ -8,100 +8,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
 <style>
-body{
-margin:0;
-font-family:'Poppins','Noto Sans Devanagari';
-background:#f5f5f5;
-}
-
-header{
-background:#a435f0;
-color:#fff;
-padding:15px;
-text-align:center;
-font-size:22px;
-}
-
-nav{
-display:flex;
-overflow:auto;
-background:#fff;
-}
-
-nav a{
-flex:1;
-text-align:center;
-padding:12px;
-text-decoration:none;
-color:#a435f0;
-font-weight:bold;
-cursor:pointer;
-}
-
-.section{
-display:none;
-padding:20px;
-}
+body{margin:0;font-family:'Poppins','Noto Sans Devanagari';background:#f5f5f5}
+header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
+nav{display:flex;overflow:auto;background:#fff}
+nav a{flex:1;text-align:center;padding:12px;text-decoration:none;color:#a435f0;font-weight:bold;cursor:pointer}
+.section{display:none;padding:20px}
 .active{display:block}
 
-/* WHITE FORM UI */
+/* form */
 .form-box{
 max-width:500px;
 margin:auto;
 background:#fff;
 padding:25px;
 border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
-}
-
-.form-box h3{
-text-align:center;
-margin-bottom:20px;
-}
-
-.input-group{
-margin-bottom:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 input,select,textarea{
 width:100%;
 padding:12px;
-border-radius:8px;
+margin:5px 0;
 border:1px solid #ccc;
-font-size:14px;
-}
-
-.row{
-display:flex;
-gap:10px;
+border-radius:8px;
 }
 
 .btn{
 padding:12px;
 border:none;
 border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-}
-
-.btn-primary{
 background:#4CAF50;
 color:#fff;
-}
-
-.btn-outline{
-background:#fff;
-border:1px solid #4CAF50;
+cursor:pointer;
+margin-top:10px;
 }
 
 .profile{
 background:#fff;
 padding:20px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 text-align:center;
 }
-
 </style>
 </head>
 
@@ -109,33 +56,25 @@ text-align:center;
 
 <header>Bihar Online Service</header>
 
-<nav>
+<nav id="menu">
 <a onclick="show('home')">Home</a>
 <a onclick="show('services')">Services</a>
-<a onclick="show('documents')">Documents</a>
 <a onclick="show('apply')">Apply</a>
-<a onclick="show('login')">Login</a>
-<a onclick="show('profile')">Profile</a>
+<a onclick="show('contact')">Contact</a>
+<a onclick="show('about')">About</a>
+<a onclick="show('dashboard')">Dashboard</a>
+<a onclick="logout()">Logout</a>
 </nav>
 
 <!-- HOME -->
 <div id="home" class="section active">
 <h2>🚀 अब ऑनलाइन फॉर्म भरना हुआ आसान</h2>
-<p>आप घर बैठे सभी सरकारी एवं प्राइवेट सेवाओं का लाभ उठा सकते हैं।</p>
-
-<ul>
-<li>✔ आय, जाति, निवास प्रमाण पत्र</li>
-<li>✔ आधार कार्ड, पैन कार्ड, वोटर कार्ड</li>
-<li>✔ ड्राइविंग लाइसेंस, पासपोर्ट</li>
-<li>✔ टाइपिंग, Resume / CV</li>
-<li>✔ शादी कार्ड, बैनर</li>
-<li>✔ एडमिशन एवं स्कॉलरशिप फॉर्म</li>
-</ul>
+<p>घर बैठे सभी सरकारी सेवाएं</p>
 </div>
 
 <!-- SERVICES -->
 <div id="services" class="section">
-<h3>Our Services</h3>
+<h3>All Services</h3>
 <ul>
 <li>Income Certificate</li>
 <li>Caste Certificate</li>
@@ -145,89 +84,73 @@ text-align:center;
 <li>Voter Card</li>
 <li>Driving Licence</li>
 <li>Passport</li>
+<li>Typing</li>
+<li>Resume</li>
+<li>Banner</li>
+<li>Admission Form</li>
+<li>Scholarship</li>
+<li>Bill Payment</li>
 </ul>
 </div>
 
-<!-- DOCUMENTS -->
-<div id="documents" class="section">
-<h3>Required Documents</h3>
-<ul>
-<li>Aadhar Card</li>
-<li>Mobile Number</li>
-<li>Email ID</li>
-<li>Passport Photo</li>
-<li>Address Proof</li>
-</ul>
-</div>
-
-<!-- APPLY WHITE FORM -->
+<!-- APPLY -->
 <div id="apply" class="section">
-
 <div class="form-box">
 <h3>Apply Form</h3>
 
-<div class="input-group">
 <input id="name" placeholder="Name">
-</div>
-
-<div class="input-group">
-<input id="mobile" placeholder="Phone Number">
-</div>
-
-<div class="input-group">
+<input id="mobile" placeholder="Mobile">
 <input id="address" placeholder="Address">
-</div>
+<input id="pincode" placeholder="Pin Code">
 
-<div class="row">
-<input id="city" placeholder="City">
-<input id="state" placeholder="State">
-<input id="pincode" placeholder="Zip">
-</div>
-
-<div class="input-group">
 <select id="service">
 <option>Select Service</option>
 <option>Income Certificate</option>
-<option>Caste Certificate</option>
 <option>Pan Card</option>
 <option>Typing</option>
+<option>Admission</option>
 </select>
-</div>
 
 <textarea id="details" placeholder="Details"></textarea>
 
-<br>
-
-<button class="btn btn-primary" onclick="saveData()">Proceed</button>
-
+<button class="btn" onclick="saveData()">Submit</button>
 </div>
 </div>
 
-<!-- LOGIN -->
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h3>Contact Us</h3>
+<p>📍 Panchdeori Bazar, Gopalganj</p>
+<p>📞 8797201218</p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+<h3>About Us</h3>
+<p>Bihar Service एक भरोसेमंद online service center है।</p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="section">
+<h3>User Dashboard</h3>
+
+<div class="profile">
+<p id="userEmail"></p>
+<p id="userData"></p>
+</div>
+</div>
+
+<!-- LOGIN PAGE -->
 <div id="login" class="section">
-
 <div class="form-box">
 <h3>Login / Signup</h3>
 
 <input type="email" id="email" placeholder="Email">
 <input type="password" id="password" placeholder="Password">
 
-<button class="btn btn-primary" onclick="signup()">Signup</button>
-<button class="btn btn-outline" onclick="login()">Login</button>
-<button class="btn btn-primary" onclick="googleLogin()">Google Login</button>
-
-</div>
-</div>
-
-<!-- PROFILE -->
-<div id="profile" class="section">
-<h3>User Profile</h3>
-
-<div class="profile">
-<p id="userEmail"></p>
-<p id="userData"></p>
-
-<button class="btn btn-primary" onclick="logout()">Logout</button>
+<button class="btn" onclick="signup()">Signup</button>
+<button class="btn" onclick="login()">Login</button>
+<button class="btn" onclick="googleLogin()">Google Login</button>
 </div>
 </div>
 
@@ -264,19 +187,27 @@ window.signup = ()=>createUserWithEmailAndPassword(auth,email.value,password.val
 
 // login
 window.login = ()=>signInWithEmailAndPassword(auth,email.value,password.value)
-.then(()=>alert("Login Success"))
+.then(()=>{
+alert("Login Success");
+show('dashboard');
+})
 .catch(e=>alert(e.message));
 
-// google
+// google login
 window.googleLogin = ()=>{
 const provider=new GoogleAuthProvider();
 signInWithPopup(auth,provider);
 }
 
 // logout
-window.logout = ()=>signOut(auth);
+window.logout = ()=>{
+signOut(auth).then(()=>{
+alert("Logout Success");
+show('login');
+});
+}
 
-// save form
+// save data
 window.saveData = async ()=>{
 const user=auth.currentUser;
 if(!user){ alert("Login First"); return; }
@@ -285,32 +216,34 @@ await setDoc(doc(db,"users",user.uid),{
 name:name.value,
 mobile:mobile.value,
 address:address.value,
-city:city.value,
-state:state.value,
 pincode:pincode.value,
 service:service.value,
 details:details.value
 });
 
-alert("Data Saved");
+alert("Saved");
 }
 
-// show profile
+// auth check (SECURITY)
 onAuthStateChanged(auth, async(user)=>{
 if(user){
+document.getElementById("menu").style.display="flex";
+show('dashboard');
+
 userEmail.innerText=user.email;
 
 const snap=await getDoc(doc(db,"users",user.uid));
 if(snap.exists()){
 let d=snap.data();
 userData.innerText=
-`Name: ${d.name}
-Mobile: ${d.mobile}
-Address: ${d.address}
-City: ${d.city}
-State: ${d.state}
-Pin: ${d.pincode}`;
+"Name: "+d.name+
+" | Mobile: "+d.mobile+
+" | Address: "+d.address+
+" | Pin: "+d.pincode;
 }
+}else{
+document.getElementById("menu").style.display="none";
+show('login');
 }
 });
 
