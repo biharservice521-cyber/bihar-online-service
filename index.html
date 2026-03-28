@@ -105,15 +105,45 @@ Bihar Online Service एक आधुनिक डिजिटल सेवा �
 <input id="name" placeholder="Name">
 <input id="mobile" placeholder="Mobile">
 
-<select id="service">
-<option>Select Service</option>
-<option>Income Certificate</option>
-<option>Caste Certificate</option>
-<option>Pan Card</option>
-<option>Typing</option>
-<option>Admission</option>
-</select>
+<select id="services" name="services">
+  <option value="">-- Select Service --</option>
 
+  <optgroup label="Certificates">
+    <option>Income Certificate</option>
+    <option>Caste Certificate</option>
+    <option>Residence Certificate</option>
+  </optgroup>
+
+  <optgroup label="Government IDs">
+    <option>Aadhar Card</option>
+    <option>PAN Card</option>
+    <option>Voter Card</option>
+    <option>Driving License</option>
+    <option>Passport</option>
+    <option>Shram Card</option>
+  </optgroup>
+
+  <optgroup label="Education">
+    <option>Result Check</option>
+    <option>10th Scholarship</option>
+    <option>12th Scholarship</option>
+    <option>College Scholarship</option>
+    <option>School Admission</option>
+    <option>College Admission</option>
+  </optgroup>
+
+  <optgroup label="Printing Services">
+    <option>Shaadi Card</option>
+    <option>Visiting Card</option>
+    <option>Banner / Flex</option>
+    <option>ID Card</option>
+    <option>Passport Photo</option>
+  </optgroup>
+
+  <optgroup label="Jobs">
+    <option>All Job Form</option>
+  </optgroup>
+</select>
 <textarea id="details" placeholder="Details"></textarea>
 
 <button class="btn" onclick="sendForm()">Submit</button>
@@ -188,7 +218,7 @@ window.open("https://wa.me/918797201218?text="+msg);
 
 // PAYMENT
 function pay(){
-window.open("upi://pay?pa=8797201218@okaxis&pn=BiharService");
+window.open("upi://pay?pa=8797201218-3@axl&pn=BiharService");
 }
 
 // LOGIN SYSTEM
