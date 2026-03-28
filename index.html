@@ -173,7 +173,7 @@ style="position:absolute;top:5px;right:8px;cursor:pointer;">✖</span>
 <a onclick="show('contact')">Contact us</a>
 <a onclick="show('about')">About us</a>
 <a onclick="show('login')">Login</a>
-  <input type="text" placeholder="Search..." id="searchBox">
+  <input type="text" id="searchBox" placeholder="Search..." onkeyup="searchService()">
 </nav>
 
 <!-- HOME (same as before) -->
@@ -464,6 +464,20 @@ alert("Wrong Details");
 function logout(){
 alert("Logout Success");
 profile.innerHTML="";
+}
+  function searchService(){
+let input = document.getElementById("searchBox").value.toLowerCase();
+let items = document.querySelectorAll(".service-card");
+
+items.forEach(item=>{
+let text = item.innerText.toLowerCase();
+
+if(text.includes(input)){
+item.style.display="block";
+}else{
+item.style.display="none";
+}
+});
 }
  // 👇 🔥 यही add करना है (सबसे नीचे)
 setTimeout(()=>{
