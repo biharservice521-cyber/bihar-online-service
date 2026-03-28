@@ -45,6 +45,27 @@ text-align:center;
 position:fixed;bottom:20px;right:20px;background:#25D366;
 color:#fff;padding:14px;border-radius:50%;text-decoration:none;
 }
+  /* ===== Moving Text CSS ===== */
+.scroll-text {
+  width: 100%;
+  overflow: hidden;
+  background: #0B1F3A;
+  color: white;
+  padding: 10px 0;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+  font-size: 16px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 </style>
 </head>
 
@@ -99,12 +120,12 @@ style="position:absolute;top:5px;right:8px;cursor:pointer;">✖</span>
 <center><h2>अब ऑनलाइन फॉर्म भरना हुआ आसान</h2>
 <p>आप घर बैठे ऑनलाइन फॉर्म भरवा सकते हैं</p>
 </center>
-  <div style="background:#0B1F3A; color:white; padding:10px; overflow:hidden;">
-  <marquee direction="left" scrollamount="6">
+  <div class="scroll-text">
+  <div class="scroll-content">
     👉 यहाँ Online Services उपलब्ध हैं: जाति, निवास, आधार कार्ड, वोटर कार्ड, परीक्षा पेपर टाइपिंग, आवेदन टाइपिंग, लेटर टाइपिंग। 
     सरकारी एवं प्राइवेट कार्यों के लिए ऑनलाइन ऑर्डर लिया जाता है। 
     www.biharservice.in | WhatsApp पर संपर्क करें।
-  </marquee>
+  </div>
 </div>
 
 <p>
