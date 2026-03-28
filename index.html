@@ -467,6 +467,10 @@ profile.innerHTML="";
 }
   function searchService(){
 let input = document.getElementById("searchBox").value.toLowerCase();
+
+// 👉 Services page open करो
+show('services');
+
 let items = document.querySelectorAll(".service-card");
 
 items.forEach(item=>{
@@ -478,6 +482,13 @@ item.style.display="block";
 item.style.display="none";
 }
 });
+
+// 👉 अगर search empty है तो सब दिखाओ
+if(input===""){
+items.forEach(item=>{
+item.style.display="block";
+});
+}
 }
  // 👇 🔥 यही add करना है (सबसे नीचे)
 setTimeout(()=>{
