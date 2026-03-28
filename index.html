@@ -213,22 +213,28 @@ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-// FORM
+// FORM SUBMIT (FIXED)
 function sendForm(){
 let name=document.getElementById("name").value;
 let mobile=document.getElementById("mobile").value;
-let service=document.getElementById("service").value;
+let service=document.getElementById("services").value; // FIXED ID
 let details=document.getElementById("details").value;
 
-if(name==""||mobile==""){alert("Fill details");return;}
-
-let msg=`Name:${name} Mobile:${mobile} Service:${service} Details:${details}`;
-window.open("https://wa.me/918797201218?text="+msg);
+if(name=="" || mobile=="" || service==""){
+alert("Please fill all details");
+return;
 }
 
-// PAYMENT
+// WhatsApp message encode
+let msg = `Name: ${name}%0AMobile: ${mobile}%0AService: ${service}%0ADetails: ${details}`;
+
+window.open("https://wa.me/918797201218?text=" + msg, "_blank");
+}
+
+// PAYMENT (FIXED UPI LINK)
 function pay(){
-window.open("upi://pay?pa=8797201218-3@axl&pn=BiharService");
+let upi = "upi://pay?pa=8797201218-3@axl&pn=Bihar Online Service&cu=INR";
+window.location.href = upi;
 }
 
 // LOGIN SYSTEM
@@ -263,6 +269,10 @@ window.open("https://wa.me/918797201218");
 },4000);
 
 </script>
+
+
+
+
 
 </body>
 </html>
