@@ -11,8 +11,20 @@
 <style>
 body{margin:0;font-family:'Noto Sans Devanagari';background:#f7f9fa}
 header{background:#a435f0;color:#fff;padding:15px;text-align:center;font-size:22px}
-nav{display:flex;background:#fff;border-bottom:1px solid #ddd}
-nav a{flex:1;padding:12px;text-align:center;cursor:pointer}
+nav{
+display:flex;
+background:#fff;
+border-bottom:1px solid #ddd;
+overflow-x:auto;
+}
+
+nav a{
+flex:none;
+padding:10px 14px;
+white-space:nowrap;
+font-size:14px;
+cursor:pointer;
+}
 nav a:hover{background:#f3e8ff;color:#a435f0}
 .section{display:none;padding:20px;margin:10px;background:#fff;border-radius:8px}
 .active{display:block}
@@ -58,22 +70,52 @@ color:#fff;padding:14px;border-radius:50%;text-decoration:none;
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: scroll-left 15s linear infinite;
-  font-size: 16px;
+  animation: scroll-left 20s linear infinite;
+  font-size: 14px;
 }
 
 @keyframes scroll-left {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+  @media(max-width:600px){
+
+.section{
+  padding:15px;
+  margin:5px;
+}
+
+.service-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+input,select,textarea{
+  font-size:14px;
+}
+
+.btn{
+  padding:10px;
+  font-size:14px;
+}
+
+header{
+  font-size:18px;
+  flex-direction:column;
+}
+
+.scroll-content{
+  font-size:13px;
+}
+
+}
 </style>
 </head>
 
 <body>
-  <img src="logo.png" width="120">
-
-<h1><header>Bihar Online Service</header></h1>
-
+<header style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+  <img src="logo.png" width="70">
+  <span style="font-size:20px;font-weight:bold;">Bihar Online Service</span>
+</header>
 
 
 <!-- TOP BOX POPUP -->
@@ -102,8 +144,6 @@ style="position:absolute;top:5px;right:8px;cursor:pointer;">✖</span>
 
 </div>
 
-</div>
-
 <nav>
 <a onclick="show('home')">Home</a>
 <a onclick="show('services')">Services</a>
@@ -126,7 +166,7 @@ style="position:absolute;top:5px;right:8px;cursor:pointer;">✖</span>
     सरकारी एवं प्राइवेट कार्यों के लिए ऑनलाइन ऑर्डर लिया जाता है। 
     www.biharservice.in | WhatsApp पर संपर्क करें।
   </div>
-</div>
+  </div>
 
 <p>
 Bihar Online Service एक आधुनिक डिजिटल सेवा प्लेटफॉर्म है जिसका मुख्य उद्देश्य लोगों को घर बैठे सभी प्रकार की ऑनलाइन सेवाएं प्रदान करना है। यह प्लेटफॉर्म उन लोगों के लिए बहुत उपयोगी है जो सरकारी और प्राइवेट सेवाओं का लाभ आसानी से लेना चाहते हैं। यहाँ पर आप आय प्रमाण पत्र, जाति प्रमाण पत्र, निवास प्रमाण पत्र, आधार कार्ड, पैन कार्ड, वोटर कार्ड, ड्राइविंग लाइसेंस और पासपोर्ट जैसी सेवाओं के लिए आवेदन कर सकते हैं।
