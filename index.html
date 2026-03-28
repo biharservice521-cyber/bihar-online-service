@@ -241,6 +241,51 @@ function logout(){
 alert("Logout Success");
 profile.innerHTML="";
 }
+  <!-- WhatsApp Popup -->
+<div id="waPopup" style="
+position:fixed;
+bottom:80px;
+right:20px;
+background:#fff;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+width:220px;
+display:none;
+z-index:999;
+">
+
+<p style="margin:0;font-size:14px;">💬 WhatsApp पर बात करना चाहते हैं?</p>
+
+<button onclick="window.open('https://wa.me/918797201218','_blank')" 
+style="
+background:#25D366;
+color:#fff;
+border:none;
+padding:8px;
+width:100%;
+margin-top:10px;
+border-radius:5px;
+cursor:pointer;
+">
+Chat Now
+</button>
+
+<span onclick="document.getElementById('waPopup').style.display='none'" 
+style="
+position:absolute;
+top:5px;
+right:8px;
+cursor:pointer;
+font-size:14px;
+">✖</span>
+
+</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById("waPopup").style.display="block";
+},3000);
 </script>
 
 </body>
