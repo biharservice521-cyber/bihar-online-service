@@ -50,6 +50,30 @@ color:#fff;padding:14px;border-radius:50%;text-decoration:none;
 <body>
 
 <h1><header>Bihar Online Service</header></h1>
+ <div id="topWa" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#25D366;
+color:#fff;
+text-align:center;
+padding:10px;
+font-size:14px;
+z-index:1000;
+display:none;
+">
+
+💬 WhatsApp पर तुरंत बात करें —  
+<a href="https://wa.me/918797201218?text=मुझे ऑनलाइन फॉर्म भरवाना है" 
+style="color:#fff;font-weight:bold;text-decoration:underline;">
+Chat Now
+</a>
+
+<span onclick="document.getElementById('topWa').style.display='none'" 
+style="position:absolute;right:15px;top:8px;cursor:pointer;">✖</span>
+
+</div>
 
 <nav>
 <a onclick="show('home')">Home</a>
@@ -344,6 +368,10 @@ function logout(){
 alert("Logout Success");
 profile.innerHTML="";
 }
+ // 👇 🔥 यही add करना है (सबसे नीचे)
+setTimeout(()=>{
+document.getElementById("topWa").style.display="block";
+},2000);
  
 </script>
  - ✅ WhatsApp Popup START -->
