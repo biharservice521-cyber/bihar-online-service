@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "formsbharo.in"
+        }
+      ],
+      "destination": "https://www.formsbharo.in/$1",
+      "permanent": true
+    }
+  ]
+}
