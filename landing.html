@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Online Form Fill Service | Forms Bharo</title>
+<meta name="description" content="Apply online for Income, Caste, Aadhar, PAN, Voter, Passport, Scholarships & Job Forms. Fast & Easy Service.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f7f9fa;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#a435f0;
+}
+
+.btn{
+background:#a435f0;
+color:#fff;
+padding:10px 18px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+.btn:hover{
+background:#8710d8;
+transform:scale(1.05);
+}
+
+/* HERO */
+.hero{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+padding:70px 30px;
+background:linear-gradient(135deg,#a435f0,#6a11cb);
+color:#fff;
+}
+
+.hero-text{
+max-width:500px;
+animation:fadeIn 1s ease;
+}
+
+.hero h1{
+font-size:38px;
+margin:0;
+}
+
+.hero p{
+margin:15px 0;
+color:#eee;
+}
+
+.hero img{
+width:320px;
+animation:float 3s infinite ease-in-out;
+}
+
+/* SERVICES */
+.services{
+padding:60px 20px;
+}
+
+.services h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:18px;
+}
+
+.card{
+background:#fff;
+padding:18px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.05);
+background:#f3e8ff;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* FEATURES */
+.features{
+background:#fff;
+padding:50px 20px;
+text-align:center;
+}
+
+.features h2{
+margin-bottom:20px;
+}
+
+.features-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#f9f9f9;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.feature:hover{
+background:#f3e8ff;
+transform:scale(1.05);
+}
+
+/* CTA */
+.cta{
+background:#a435f0;
+color:#fff;
+text-align:center;
+padding:60px 20px;
+}
+
+.cta h2{
+margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="logo">Forms Bharo</div>
+<button class="btn" onclick="whatsapp()">Apply Now</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Online Form Fill Service</h1>
+<p>?? ???? ??? ?????? ?? ???????? ????? ?????? — Fast, Easy & Secure</p>
+<button class="btn" onclick="whatsapp()">Start Now</button>
+</div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card" onclick="send('Income Certificate')">Income Certificate</div>
+<div class="card" onclick="send('Caste Certificate')">Caste Certificate</div>
+<div class="card" onclick="send('Residence Certificate')">Residence Certificate</div>
+<div class="card" onclick="send('Aadhar Card')">Aadhar Card</div>
+<div class="card" onclick="send('Pan Card')">Pan Card</div>
+<div class="card" onclick="send('Voter Card')">Voter Card</div>
+<div class="card" onclick="send('Driving License')">Driving License</div>
+<div class="card" onclick="send('Passport')">Passport</div>
+
+<div class="card" onclick="send('Result Check')">Result Check</div>
+<div class="card" onclick="send('Shram Card')">Shram Card</div>
+
+<div class="card" onclick="send('10th Scholarship')">10th Scholarship</div>
+<div class="card" onclick="send('12th Scholarship')">12th Scholarship</div>
+<div class="card" onclick="send('College Scholarship')">College / University Scholarship</div>
+<div class="card" onclick="send('School Admission')">School Admission</div>
+<div class="card" onclick="send('College Admission')">College / University Admission</div>
+
+<div class="card" onclick="send('Shaadi Card')">Shaadi Card</div>
+<div class="card" onclick="send('Visiting Card')">Visiting Card</div>
+<div class="card" onclick="send('Banner')">Banner / Flex</div>
+<div class="card" onclick="send('ID Card')">ID Card</div>
+<div class="card" onclick="send('Photo')">Passport Photo</div>
+
+<div class="card" onclick="send('Exam Typing')">Exam Paper Typing</div>
+<div class="card" onclick="send('Test Typing')">Test Paper Typing</div>
+<div class="card" onclick="send('Application Typing')">Application Typing</div>
+<div class="card" onclick="send('Letter Typing')">Letter Typing</div>
+<div class="card" onclick="send('Resume Typing')">Resume / CV Typing</div>
+
+<div class="card" onclick="send('Job Form')">All Job Forms</div>
+
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<h2>Why Choose Forms Bharo?</h2>
+
+<div class="features-box">
+<div class="feature">? Fast Service</div>
+<div class="feature">?? 100% Online</div>
+<div class="feature">?? Secure Process</div>
+<div class="feature">?? Trusted Support</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Ready to Apply Online?</h2>
+<button class="btn" onclick="whatsapp()">Apply Now</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Forms Bharo | All Rights Reserved</p>
+</footer>
+
+<script>
+function whatsapp(){
+window.open("https://wa.me/919919410429","_blank");
+}
+
+function send(service){
+window.open("https://wa.me/919919410429?text="+service+" apply karna hai","_blank");
+}
+</script>
+
+</body>
+</html>
